@@ -121,7 +121,6 @@ If your infrastructure is cloud-based, you can use your orchestrator to help pro
 ## Introduction to Kestra
 
 
-
 Kestra is an orchestration platform that's highly flexible and well-equipped to manage all types of pipelines  Kestra provides a user-friendly interface and a YAML-based configuration format, making it easy to define, monitor, and manage workflows.
 
 Kestra gives you the flexibility on how you control your workflows and gives you the option to do it in no code low code or full code.
@@ -162,9 +161,6 @@ Workflows are referenced as Flows and they are declared using YAML. Within each 
 
 ## Getting started pipeline
 
-_([Video source](https://www.youtube.com/watch?v=Np6QmmcgLCs))_
-
-
 Flow: [`01_getting_started_data_pipeline.yaml`](flows/01_getting_started_data_pipeline.yaml)
 
 This introductory flow is added just to demonstrate a simple data pipeline which extracts data via
@@ -181,7 +177,7 @@ Click on Create my first flow. Flows are declared using YAML. This YAML file des
 ```yaml
 
 id: 01_getting_started_data_pipeline
-namespace: zoomcamp
+namespace: data-pipeline-orchestration-kestra
 
 inputs:
   - id: columns_to_keep
@@ -250,7 +246,7 @@ To begin with, here we have the ID, which is the name of our workflow. Followed 
 ```yaml
 
 id: 01_getting_started_data_pipeline
-namespace: zoomcamp
+namespace: data-pipeline-orchestration-kestra
 ```
 
 **Inputs**
@@ -429,7 +425,7 @@ Tasks Query --> Outputs uri --> Preview :
 
 ### 1: Create a Docker-compose.yaml
 
-Lets create a docker-compose.yml file inside your 02-workflow-orchestration:
+Lets create a docker-compose.yml file inside your data-pipeline-orchestration-kestra:
 
 ```yaml
 
@@ -565,7 +561,7 @@ The directory structure now should look like this:
 In a new terminal, go to the path where the docker-compose file is and run the following command:
 
 ```
-docker-compose up -p kestra-postgres up -d
+docker-compose -p kestra-postgres up -d
 ```
 
 The -p option specifies a custom project name (kestra-postgres in this case).
@@ -1004,7 +1000,7 @@ variables:
 
 - **table:** This variable creates a reference to a dataset and table in Google BigQuery. 
   - kv('GCP_DATASET'): This fetches the dataset name from the key-value store. 
-  - The result might look like "zoomcamp.yellow_tripdata_2024_12", which points to a specific table in BigQuery.
+  - The result might look like "ny_taxi_464111_bigquery_dataset.yellow_tripdata_2024_12", which points to a specific table in BigQuery.
 
 - **data:**
   - outputs.extract.outputFiles: This accesses the output of a task named extract and looks for the file that matches the name generated dynamically. 
