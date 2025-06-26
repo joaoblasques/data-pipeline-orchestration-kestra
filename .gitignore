@@ -1,0 +1,29 @@
+# Ignore virtual environment directories and files
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.envrc
+
+# Data directories
+ny_taxi_postgres_data/
+data_pgadmin/
+
+# Sensitive files
+*.json
+*.key
+*.pem
+*credentials*
+*secret*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
