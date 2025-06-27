@@ -16,6 +16,7 @@ data_pgadmin/
 *.pem
 *credentials*
 *secret*
+flows/04_gcp_kv.yaml
 
 # IDE files
 .vscode/

@@ -1,5 +1,5 @@
 id: 04_gcp_kv
-namespace: zoomcamp
+namespace: data-pipeline-orchestration-kestra
 
 tasks:
   - id: gcp_creds
