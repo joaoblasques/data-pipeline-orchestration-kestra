@@ -1,8 +1,8 @@
-# SUMMARY
+# DATA PIPELINE ORCHESTRATION USING KESTRA
 
 ## Project Overview
 
-This repository demonstrates workflow orchestration for data engineering pipelines using [Kestra](https://kestra.io/). It guides users through building, running, and scheduling data pipelines that extract, transform, and load (ETL) data both locally (with PostgreSQL) and in the cloud (with Google Cloud Platform). The project is hands-on and includes conceptual explanations, infrastructure setup, and several example pipeline flows.
+This [repository](https://github.com/joaoblasques/data-pipeline-orchestration-kestra) demonstrates workflow orchestration for data engineering pipelines using [Kestra](https://kestra.io/). It guides users through building, running, and scheduling data pipelines that extract, transform, and load (ETL) data both locally (with PostgreSQL) and in the cloud (with Google Cloud Platform). The project is hands-on and includes conceptual explanations, infrastructure setup, and several example pipeline flows.
 
 ---
 
@@ -25,8 +25,8 @@ This repository demonstrates workflow orchestration for data engineering pipelin
   - `06_gcp_taxi.yaml`: Loads taxi data to GCS and BigQuery
   - `06_gcp_taxi_scheduled.yaml`: Scheduled/backfill version for GCP
 - `images/` — Visual documentation (pipeline diagrams, UI screenshots, etc.)
-- `ny_taxi_postgres_data/` — Persistent volume for the local PostgreSQL instance
-- `data_pgadmin/` — Persistent volume for pgAdmin (database management UI)
+- `ny_taxi_postgres_data/` — Persistent volume for the local PostgreSQL instance (.gitignored)
+- `data_pgadmin/` — Persistent volume for pgAdmin (database management UI)(.gitignored)
 - `docker-compose.yaml` — Defines the local infrastructure:
   - **postgres**: For Kestra metadata
   - **kestra**: Orchestration engine
